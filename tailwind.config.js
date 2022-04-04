@@ -1,11 +1,17 @@
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false, 
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#FF3030",
+      },
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
-}
+  plugins: [
+    require('@nuxtjs/tailwindcss')
+  ],
+};

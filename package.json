@@ -9,7 +9,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "core-js": "^3.19.3",
+    "@headlessui/vue": "^1.5.0",
+    "@heroicons/vue": "^1.0.6",
+    "@tailwindcss/forms": "^0.5.0",
+    "core-js": "^3.21.1",
+    "heroicons": "^1.0.6",
     "nuxt": "^2.15.8",
     "vue": "^2.6.14",
     "vue-server-renderer": "^2.6.14",
