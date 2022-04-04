@@ -113,33 +113,55 @@
 
     <!-- Static sidebar for desktop -->
     <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
-      <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div
-        class="
-          flex flex-col flex-grow
-          border-r border-gray-200
-          pt-5
-          bg-white
-          overflow-y-auto
-        "
+        class="flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-white"
       >
-        <div class="flex items-center flex-shrink-0 px-4">
-          <img
-            class="h-8 w-auto"
-            src="https://th.bing.com/th/id/OIP.QrcjeQsVGOVaDtY6SJCNMAHaHZ?pid=ImgDet&rs=1"
-            alt="Workflow"
-          />
-        </div>
-        <div class="mt-5 flex-grow flex flex-col">
-          <nav class="flex-1 px-2 pb-4 space-y-1">
+        <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
+          <div class="flex-shrink-0 flex p-5 mt-20">
+            <a href="#" class="flex-shrink-0 w-full group block">
+              <div class="flex items-center">
+                <div>
+                  <img
+                    class="inline-block h-9 w-9 rounded-full"
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                </div>
+                <div class="ml-3">
+                  <p
+                    class="
+                      text-sm
+                      font-medium
+                      text-gray-700
+                      group-hover:text-gray-900
+                    "
+                  >
+                    Tom Cook
+                  </p>
+                  <p
+                    class="
+                      text-xs
+                      font-medium
+                      text-gray-500
+                      group-hover:text-gray-700
+                    "
+                  >
+                    Manager
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <nav class="mt-5 flex-1 px-2 bg-white space-y-1" aria-label="Sidebar">
             <a
               v-for="item in navigation"
               :key="item.name"
               :href="item.href"
               :class="[
                 item.current
-                  ? 'bg-gray-100 text-gray-900'
-                  : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
+                  ? 'bg-gray-100 text-gray-900 hover:text-gray-900 hover:bg-gray-100'
+                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50',
                 'group flex items-center px-2 py-2 text-sm font-medium rounded-md',
               ]"
             >
@@ -153,7 +175,20 @@
                 ]"
                 aria-hidden="true"
               />
-              {{ item.name }}
+              <span class="flex-1">
+                {{ item.name }}
+              </span>
+              <span
+                v-if="item.count"
+                :class="[
+                  item.current
+                    ? 'bg-white'
+                    : 'bg-gray-100 group-hover:bg-gray-200',
+                  'ml-3 inline-block py-0.5 px-3 text-xs font-medium rounded-full',
+                ]"
+              >
+                {{ item.count }}
+              </span>
             </a>
           </nav>
         </div>
@@ -313,17 +348,10 @@
       <main class="flex-1">
         <div class="py-6">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
-          </div>
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <!-- Replace with your content -->
-            <EmployeeTable />
+            <TableSectionHeader />
             <div class="py-4">
-              <div
-                class="border-4 border-dashed border-gray-200 rounded-lg h-96"
-              />
+              <EmployeeTable />
             </div>
-            <!-- /End replace -->
           </div>
         </div>
       </main>
@@ -332,10 +360,12 @@
 </template>
 
 <script>
-import EmployeeTable from '../../components/EmployeeTable';
+import TableSectionHeader from "../../components/TableSectionHeader";
+import EmployeeTable from "../../components/EmployeeTable";
 export default {
   name: "Dashboard",
   components: {
+    TableSectionHeader,
     EmployeeTable,
   },
 };
