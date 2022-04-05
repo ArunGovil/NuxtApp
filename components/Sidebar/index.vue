@@ -1,4 +1,3 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <div
     class="
@@ -10,9 +9,8 @@
       overflow-y-auto
     "
   >
-    <div class="flex items-center flex-shrink-0 px-4 space-y-5">
-      
-     <div class="flex-shrink-0 flex p-5 mt-10">
+   
+      <div class="flex-shrink-0 flex p-5 mt-20">
             <a href="#" class="flex-shrink-0 w-full group block">
               <div class="flex items-center">
                 <div>
@@ -47,31 +45,124 @@
               </div>
             </a>
           </div>
-    </div>
+
     <div class="mt-5 flex-grow flex flex-col">
       <nav class="flex-1 bg-white space-y-1" aria-label="Sidebar">
+        <!-- Current: "bg-indigo-50 border-indigo-600 text-indigo-600", Default: "border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
         <a
-          v-for="item in navigation"
-          :key="item.name"
-          :href="item.href"
-          :class="[
-            item.current
-              ? 'bg-indigo-50 border-indigo-600 text-indigo-600'
-              : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900',
-            'group flex items-center px-3 py-2 text-sm font-medium border-l-4',
-          ]"
+          href="#"
+          class="
+            bg-primary-100
+            border-primary
+            text-primary
+            group
+            flex
+            items-center
+            px-3
+            py-2
+            text-sm
+            font-medium
+            border-l-4
+          "
         >
-          <component
-            :is="item.icon"
-            :class="[
-              item.current
-                ? 'text-indigo-500'
-                : 'text-gray-400 group-hover:text-gray-500',
-              'mr-3 flex-shrink-0 h-6 w-6',
-            ]"
+          <svg
+            class="text-primary mr-3 flex-shrink-0 h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
             aria-hidden="true"
-          />
-          {{ item.name }}
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            />
+          </svg>
+          Employees
+        </a>
+
+        <a
+          href="#"
+          class="
+            border-transparent
+            text-gray-600
+            hover:bg-gray-50 hover:text-gray-900
+            group
+            flex
+            items-center
+            px-3
+            py-2
+            text-sm
+            font-medium
+            border-l-4
+          "
+        >
+          <svg
+            class="
+              text-gray-400
+              group-hover:text-gray-500
+              mr-3
+              flex-shrink-0
+              h-6
+              w-6
+            "
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+            />
+          </svg>
+          Job
+        </a>
+
+        <a
+          href="#"
+          class="
+            border-transparent
+            text-gray-600
+            hover:bg-gray-50 hover:text-gray-900
+            group
+            flex
+            items-center
+            px-3
+            py-2
+            text-sm
+            font-medium
+            border-l-4
+          "
+        >
+          <svg
+            class="
+              text-gray-400
+              group-hover:text-gray-500
+              mr-3
+              flex-shrink-0
+              h-6
+              w-6
+            "
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+            />
+          </svg>
+          Sea Export
         </a>
       </nav>
     </div>
@@ -79,24 +170,6 @@
 </template>
 
 <script>
-import {
-  CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
-  HomeIcon,
-  InboxIcon,
-  UsersIcon,
-} from "@heroicons/vue/outline";
-
-const navigation = [
-  { name: "Dashboard", icon: HomeIcon, href: "#", current: true },
-  { name: "Team", icon: UsersIcon, href: "#", current: false },
-  { name: "Projects", icon: FolderIcon, href: "#", current: false },
-  { name: "Calendar", icon: CalendarIcon, href: "#", current: false },
-  { name: "Documents", icon: InboxIcon, href: "#", current: false },
-  { name: "Reports", icon: ChartBarIcon, href: "#", current: false },
-];
-
 export default {
   name: "Sidebar",
   setup() {
