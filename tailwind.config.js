@@ -12,6 +12,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('@nuxtjs/tailwindcss')
+    require('@nuxtjs/tailwindcss'),
+    require('@tailwindcss/forms'),
   ],
 };
