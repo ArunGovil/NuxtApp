@@ -438,6 +438,10 @@
               </div>
             </div>
 
+             <div class="py-3 mr-10 flex justify-end">
+              <button type="button" class="inline-flex items-center px-6 py-1.5 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">Save</button>
+            </div>
+
 
           </div>
         </div>

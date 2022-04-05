@@ -89,16 +89,6 @@
                     'group flex items-center px-2 py-2 text-base font-medium rounded-md',
                   ]"
                 >
-                  <component
-                    :is="item.icon"
-                    :class="[
-                      item.current
-                        ? 'text-gray-500'
-                        : 'text-gray-400 group-hover:text-gray-500',
-                      'mr-4 flex-shrink-0 h-6 w-6',
-                    ]"
-                    aria-hidden="true"
-                  />
                   {{ item.name }}
                 </a>
               </nav>
@@ -361,12 +351,30 @@
 
 <script>
 import TableSectionHeader from "../../components/TableSectionHeader";
+import Sidebar from "../../components/Sidebar";
 import EmployeeTable from "../../components/EmployeeTable";
+
+
+const navigation = [
+  { name: "Dashboard",  href: "#", current: true },
+  { name: "Team", href: "#", current: false },
+  { name: "Projects",  href: "#", current: false },
+  { name: "Calendar", href: "#", current: false },
+  { name: "Documents",  href: "#", current: false },
+  { name: "Reports", href: "#", current: false },
+];
+
 export default {
   name: "Dashboard",
+  setup() {
+    return {
+      navigation,
+    };
+  },
   components: {
     TableSectionHeader,
     EmployeeTable,
+    Sidebar,
   },
 };
 </script>

@@ -29,6 +29,7 @@
                 name="email"
                 type="email"
                 autocomplete="email"
+                placeholder="Enter Your Email"
                 required=""
                 class="
                   appearance-none
@@ -41,8 +42,8 @@
                   shadow-sm
                   placeholder-gray-400
                   focus:outline-none
-                  focus:ring-indigo-500
-                  focus:border-indigo-500
+                  focus:ring-gray-300
+                  focus:border-gray-300
                   sm:text-sm
                 "
               />
@@ -62,6 +63,7 @@
                 name="password"
                 type="password"
                 autocomplete="current-password"
+                placeholder="Enter Password"
                 required=""
                 class="
                   appearance-none
@@ -74,8 +76,8 @@
                   shadow-sm
                   placeholder-gray-400
                   focus:outline-none
-                  focus:ring-indigo-500
-                  focus:border-indigo-500
+                  focus:ring-gray-300
+                  focus:border-gray-300
                   sm:text-sm
                 "
               />
