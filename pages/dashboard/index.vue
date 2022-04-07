@@ -172,6 +172,7 @@
 import TableSectionHeader from "../../components/TableSectionHeader";
 import Sidebar from "../../components/Sidebar";
 import EmployeeTable from "../../components/EmployeeTable";
+import TabBar from "../../components/TabBar";
 
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
@@ -193,6 +194,7 @@ export default {
     TableSectionHeader,
     EmployeeTable,
     Sidebar,
+    TabBar,
   },
 };
 </script>
