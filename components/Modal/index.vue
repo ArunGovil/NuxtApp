@@ -67,7 +67,7 @@
           shadow-xl
           transform
           transition-all
-          sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6
+          sm:my-8 sm:align-middle sm:max-w-lg sm:p-6
         "
       >
         <div class="sm:flex sm:items-start">
