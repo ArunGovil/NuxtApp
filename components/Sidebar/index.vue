@@ -53,8 +53,8 @@
           href="#"
           class="
             bg-primary-100
-            border-primary
-            text-primary
+            border-indigo-600
+            text-indigo-600
             group
             flex
             items-center
@@ -66,7 +66,7 @@
           "
         >
           <svg
-            class="text-primary mr-3 flex-shrink-0 h-6 w-6"
+            class="text-indigo-600 mr-3 flex-shrink-0 h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"

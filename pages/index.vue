@@ -86,7 +86,7 @@
 
           <div class="flex items-center justify-end">
             <div class="text-sm">
-              <a href="#" class="font-medium text-gray-500 hover:text-primary">
+              <a href="#" class="font-medium text-gray-500 hover:text-indigo-600">
                 Forgot your password?
               </a>
             </div>
@@ -107,8 +107,8 @@
                 text-sm
                 font-medium
                 text-white
-                bg-primary
-                hover:bg-primary-700
+                bg-indigo-600
+                hover:bg-indigo-700
                 focus:outline-none
                 focus:ring-2
                 focus:ring-offset-2

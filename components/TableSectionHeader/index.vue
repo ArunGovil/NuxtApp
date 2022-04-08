@@ -34,12 +34,12 @@
             font-medium
             rounded-md
             text-white
-            bg-primary
-            hover:bg-primary
+            bg-indigo-600
+            hover:bg-indigo-600
             focus:outline-none
             focus:ring-2
             focus:ring-offset-2
-            focus:ring-primary
+            focus:ring-indigo-600
           "
         >
           Add Employee

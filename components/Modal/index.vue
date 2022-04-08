@@ -82,7 +82,9 @@
               <div class="mb-2">
                 <SelectInput label="Attachment type" />
               </div>
-              <TextInput label="Select File" type="file" />
+               <div class="mb-2">
+                  <TextInput label="Select Attachment File" type="file" />
+              </div>
             </div>
           </div>
         </div>
@@ -99,11 +101,11 @@
               shadow-sm
               px-4
               py-2
-              bg-red-600
+              bg-indigo-600
               text-base
               font-medium
               text-white
-              hover:bg-red-700
+              hover:bg-indigo-700
               focus:outline-none
               focus:ring-2
               focus:ring-offset-2
