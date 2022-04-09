@@ -158,7 +158,10 @@
         <div class="py-6">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
             <TableSectionHeader />
-            <div class="py-4">
+             <div class="pt-5 ml-10">
+               <SearchInput />
+            </div>
+            <div class="py-2">
               <EmployeeTable />
             </div>
           </div>
@@ -173,6 +176,7 @@ import TableSectionHeader from "../../components/TableSectionHeader";
 import Sidebar from "../../components/Sidebar";
 import EmployeeTable from "../../components/EmployeeTable";
 import TabBar from "../../components/TabBar";
+import SearchInput from "../../components/SearchInput";
 
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
@@ -195,6 +199,7 @@ export default {
     EmployeeTable,
     Sidebar,
     TabBar,
+    SearchInput,
   },
 };
 </script>
